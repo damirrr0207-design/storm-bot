@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="STORM BOT — ИИ-помощник STORM STUDIO. Идеи, программирование и разработка игр.">
+  <title>STORM BOT — STORM STUDIO</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="STORM BOT">
+        <span class="brand-mark">ϟ</span>
+        <span><strong>STORM BOT</strong><small>STORM STUDIO</small></span>
+      </a>
+      <button class="new-chat" id="newChat">＋ Новый диалог</button>
+      <div class="side-label">ИСТОРИЯ</div>
+      <div id="historyList" class="history-list"></div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div><span>ИИ-помощник студии</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Открыть меню">☰</button>
+        <div class="mobile-brand"><span class="brand-mark">ϟ</span> STORM BOT</div>
+        <div class="top-status"><span class="status-dot"></span> STORM STUDIO</div>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="hero-logo">ϟ</div>
+          <div class="eyebrow">STORM STUDIO · AI ASSISTANT</div>
+          <h1>Привет, я <span>STORM BOT</span></h1>
+          <p>Твой ИИ-помощник для идей, кода и создания игр.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Придумай три идеи для игры в стиле RTS">🎮 Придумать игру <span>↗</span></button>
+            <button class="suggestion" data-prompt="Помоги написать Python-код для игры">⌨️ Написать код <span>↗</span></button>
+            <button class="suggestion" data-prompt="Предложи план развития STORM STUDIO">⚡ Развить студию <span>↗</span></button>
+            <button class="suggestion" data-prompt="Объясни простыми словами, как работает искусственный интеллект">🧠 Узнать об ИИ <span>↗</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" maxlength="6000" placeholder="Напиши сообщение STORM BOT..." aria-label="Сообщение"></textarea>
+          <button class="send-button" id="sendButton" type="submit" aria-label="Отправить сообщение">↑</button>
+        </form>
+        <div class="composer-note">STORM BOT может ошибаться. Не отправляй пароли и личные данные.</div>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
